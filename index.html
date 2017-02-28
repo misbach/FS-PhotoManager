@@ -1,27 +1,42 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>FamilySearch Photo Manager</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/fs-js-lite@latest/dist/FamilySearch.min.js"></script>
-</head>
-<body>
+	<head>
+	  <meta charset="utf-8">
+	  <title>FamilySearch Photo Manager</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1>FamilySearch Photo Manager</h1>
+			<p>See and manage your photos on FamilySearch</a></p>
+			<button class="login btn btn-primary">Login</button>
 
-<div class="container">
-	<h1>FamilySearch Photo Manager</h1>
-	<p>See and manage your photos on FamilySearch</a></p>
-	<button class="login btn btn-primary">Login</button>
-	<button class="import btn btn-success">Import Photos</button>
+			<!-- Tab Nav -->
+			<ul class="nav nav-tabs" role="tablist">
+			  <li class="nav-item">
+			    <a class="nav-link active" data-toggle="tab" href="#user" role="tab">Your Photos</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" data-toggle="tab" href="#ancestor" role="tab">Ancestor Photos</a>
+			  </li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content">
+			  <div class="tab-pane active" id="user" role="tabpanel">
+					<ul class="photos1"></ul>
+			  </div>
+			  <div class="tab-pane" id="ancestor" role="tabpanel">
+					<ul class="photos2"></ul>
+			  </div>
+			</div>
 
-	<div><ul class="photos"></ul></div>
-</div>
+		</div>
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"</script>
-<script src="https://unpkg.com/fs-js-lite@latest/dist/FamilySearch.min.js"></script>
-<script src="logic.js"></script>
-</body>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+		<script src="FamilySearch.min.js"></script>
+		<script src="logic.js"></script>
+	</body>
 </html>

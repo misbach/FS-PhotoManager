@@ -1,5 +1,6 @@
-.photos { display: inline-flex; flex-wrap: wrap; margin-top: 30px; margin-left: -40px; }
+.photos1, .photos2 { display: inline-flex; flex-wrap: wrap; margin-top: 30px; margin-left: -40px; }
 .photo { width: 200px; overflow: hidden; margin-right: 30px; margin-bottom: 20px; }
 .title { height: 25px; }
 .description { height: 50px; }
 .link:hover { text-decoration: none; }
+.nav-tabs {margin-top: 30px; }
