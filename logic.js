@@ -2,7 +2,7 @@ var fs = new FamilySearch({
   environment: 'production',
   appKey: 'a02j000000KTRjpAAH',
   redirectUri: 'https://misbach.github.io/FS-PhotoManager/',
-  // redirectUri: 'http://localhost:5000/',
+  // redirectUri: 'http://localhost:5000',
   saveAccessToken: true,
   tokenCookie: 'FS_AUTH_TOKEN'
 });
@@ -51,9 +51,16 @@ function extractPhotos (memories, location) {
 			thumb = thumb.replace("dist.png","thumb200s.jpg");
 			var title = (memories[i].titles) ? memories[i].titles[0].value : "";
 			var desc = (memories[i].descriptions) ? memories[i].descriptions[0].value : "";
-			var url = "https://familysearch.org/photos/artifacts/"+memories[i].id;
+			var url = "https://www.familysearch.org/photos/artifacts/"+memories[i].id;
 
-			$(location).append('<li class="photo"><a href="'+url+'" class="link" target="_blank"><div><div class="title">'+title+'</div><img src="'+thumb+'"><div class="description">'+desc+'</div></div></a></li>');
+			$(location).append(`
+				<li class="photo">
+				<a href="`+url+`" class="link" target="_blank">
+				<div>
+				<div class="title">`+title+`</div>
+				<img src="`+thumb+`">
+				<div class="description">`+desc+`</div></div>
+				</a></li>`);
 		}
 	}
 }
